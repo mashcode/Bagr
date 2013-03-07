@@ -3,6 +3,8 @@ Awesome-Ember-Bootstrap
 
 This project merges FontAwesome and Twitter Bootstrap into a simple Ember.js app. foundation.css is still in the distro.
 
+<a href="http://mashcode.github.com/Bagr">Bagr</a>
+
 Twitter Bootstrap v2.3.1
 FontAwesome v3.0
 
