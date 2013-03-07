@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gard: Garden Bagger</title>
+
+    <!-- Included CSS Files (Compressed) -->
+
+	<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+	<![endif]-->
+
+
+  </head>
+  <body>
+	
+<script type="text/x-handlebars" data-template-name="application">
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12 banner">
+		<h1><i class="icon-food icon-2x icon-border"></i> Bagr</h1>
+		<hr>
+		<p>{{ outlet }}</p>
+		</div>
+	</div>
+</div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="index">
+	<h3><a href="/#/bags/">Make some Bags</a></h3>
+</script>
+
+<script type="text/x-handlebars" data-template-name="bags/index">
+	<h2>Please Select a Bag</h2>
+</script>
+
+<script type="text/x-handlebars" data-template-name="bags">
+	<div class="row-fluid">
+		<div class="span2" id="bags">
+		{{ partial "bagMenu" }}
+		</div>
+		<div class="span10" id="order">
+			{{ outlet }}
+		</div>
+	</div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="_bagMenu">
+	{{#each bag in controller}}
+		<div>{{#linkTo "bag" bag class="span6 ppbagIcon"}}{{ bag.id }}{{/linkTo}}</div>
+	{{/each}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="bag">
+	<div class="row-fluid">
+		<div class="span2">
+		{{ render "food" }}
+		</div>
+		<div class="span9" id="bagId">
+		<h2 class="ppbagIcon"><span>{{id}}</span></h2>
+		{{ render "tab" tab }}
+		</div>
+	</div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="tab">
+	<ul id="grower-tab">
+	{{#each tabItem in tabItems}}
+	<li><h3>{{ tabItem.food.name }} <span>${{ money tabItem.cents }}</span></h3></li>
+	{{else}}
+	<li><h3>Click a food item to add it</li></h3>
+	{{/each}}
+	<li id="total"><h3>Total <span>${{ money cents }}</span></h3></li>
+	</ul>
+</script>
+
+<script type="text/x-handlebars" data-template-name="food">
+	<ul id="menu">
+	{{#each controller}}
+	<li>
+	<div href="#" {{ action "addFood" this }} {{ bindAttr class="name" }}></div>
+	<p>{{ name }}</p></li>
+	{{/each}}
+	</ul>
+</script>
+
+    <script src="js/libs/jquery-1.8.3.min.js"></script>
+    <script src="js/libs/handlebars-1.0.0.rc.2.js"></script>
+    <script src="js/libs/ember.js"></script>
+    <script src="js/libs/ember-data.js"></script>
+    <script src="js/app.js"></script>
+    <!--script src="http://code.jquery.com/jquery.js"></script-->
+  </body>
+</html>

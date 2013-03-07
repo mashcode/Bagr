@@ -1,0 +1,130 @@
+#bags a {
+  text-align: center;
+}
+
+#bags a {
+  font-weight: bold;
+  font-size: 2.5em;
+  text-align: left;
+  text-decoration: none;
+}
+
+ul#menu li {
+  list-style-type: none;
+  text-align: center;
+  padding-bottom: ;
+}
+ul#menu li div {
+  font-size: 64px;
+  line-height: 64px;
+}
+ul#menu li p {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+#grower-tab {
+  background-color: #f2f2f2;
+  border: 1px solid #e6e6e6;
+  padding: 1em 2em;
+}
+#grower-tab li {
+  list-style-type: none;
+  border-bottom: 1px solid #ccc;
+}
+#grower-tab li#total h3 {
+  font-weight: bold;
+}
+#grower-tab li#total {
+  border-top: 4px solid black;
+  border-bottom: 0;
+}
+#grower-tab li h3 {
+  font-weight: normal;
+}
+#grower-tab li span {
+  float: right;
+}
+
+#order {
+  border-left: 1px dashed #333;
+}
+#order h2 {
+  text-align: center;
+}
+
+/* Banner */
+.banner {
+	margin-top: 20px;
+}
+
+/* Veggie Sprites and Paperbag buttons */
+
+#menu {
+	background-color: #fff;
+	margin: ;
+}
+
+#menu li div {
+	width: 105px;
+	height: 120px;
+	margin: 0;
+	cursor: pointer;
+}
+
+#menu li .Beets {
+	background: url(../img/vegIcons.png) -30px -20px no-repeat;
+}
+
+#menu li .Potato {
+	background: url(../img/vegIcons.png) -280px -20px no-repeat;
+}
+
+#menu li .Kale {
+	background: url(../img/vegIcons.png) -155px -20px no-repeat;
+}
+
+#menu li .Broccoli {
+	background: url(../img/vegIcons.png) -155px -170px no-repeat;
+}
+
+#menu li .Carrots {
+	background: url(../img/vegIcons.png) -270px -160px no-repeat;
+}
+
+#menu li .Squash {
+	background: url(../img/vegIcons.png) -32px -160px no-repeat;
+}
+
+#bags .ppbagIcon {
+	background: url(../img/ppbagIcon.png) 3px 0px no-repeat;
+	margin: 10px;
+	padding: 10px;
+	height: 200px;
+	width: 160px;
+	text-align: left;
+}
+
+#bagId .ppbagIcon {
+	background: url(../img/ppbagIcon.png) 400px -10px no-repeat;
+	height: 100px;
+	width: ;
+	margin: 0 0 -29px;
+}
+
+#bags a:hover {
+  border: solid 1px #e6e6e6;
+  background-color: #fff;
+}
+
+#bags .active:hover, .active {
+  border: solid 1px #e6e6e6;
+  color: #000;
+}
+
+h2 span {
+  background-color: #333;
+  color: white;
+  padding: 0.5em 1em;
+}
